@@ -19,7 +19,7 @@
 }
 
 .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -299,7 +299,7 @@ a {
 }
 
 .project-container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 0;
   display: flex;
@@ -455,20 +455,24 @@ a {
 }
 
 @media (max-width: 1300px) {
+  .faded-text{
+    left: 3%;
+  }
   .page-header {
     padding-top: 30px;
     color: var(--bgOrange);
     text-align: center;
     font-size: 40px;
+    margin-bottom: 2rem;
   }
   .project-container {
-    padding: 5px;
-    margin: 10px;
+    padding: 10px;
+    margin: 0 auto;
     gap: 60px;
   }
   .project-card {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
   .project-card {
     background-size: cover;
@@ -514,13 +518,15 @@ a {
 .skills-container {
   position: relative;
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5rem;
   margin: 10rem auto;
   gap: 30px;
 }
 
 .skill-container-left {
-  width: 50%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
 }
@@ -528,7 +534,7 @@ a {
 .skill-container-right {
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  min-width: 50%;
   position: relative;
   gap: 2rem;
   justify-content: center;
@@ -664,6 +670,7 @@ footer {
 }
 
 .footer-wrapper {
+  max-width: 100%;
   display: flex;
   gap: 1rem;
   padding: 1.2rem;
@@ -698,4 +705,96 @@ footer {
 .icon-wrapper {
   display: flex;
   gap: 1rem;
+}
+
+@media (max-width:600px) {
+  .hero-section{
+    max-width: 100%;
+    margin: 2rem auto;
+    padding-bottom: 4rem;
+  }
+  .nav-items{
+    display: none;
+  }
+  .faded-text{
+    font-size: 3rem;
+    bottom: -20%;
+  }
+  .footer{
+    padding: 3rem;
+  }
+  .footer-wrapper{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .footer-faded-text{
+    font-size: 2em;
+  }
+  .hero-section-heading{
+    font-size: 33px;
+}
+  .skill-fade-text{
+    font-size: 8rem;
+    bottom: -24%;
+    right: -20%;
+  }
+}
+@media (max-width:900px) {
+  .hero-section{
+    flex-wrap: wrap;
+  }
+  .hero-section-right{
+    display: none;
+  }
+  .skills-container{
+    padding: 1rem;
+    margin: 2rem auto;
+  }
+  .skill-fade-text{
+    font-size: 2em;
+  }
+  .faded-text{
+    font-size: 4em;
+    bottom: -18%;
+    left: 2%;
+  }
+  .skills-container{
+    flex-direction: column;
+    padding: 3rem;
+    margin: 5rem auto;
+  }
+  .skill-container-left{
+    max-width: 100%;
+    margin: 1rem auto;
+  }
+  .skill-container-right{ 
+    display: none;
+  }
+  .skill-fade-text{
+    font-size: 10rem;
+    bottom: -27%;
+    right: -20%;
+  }
+  .contactus-heading{
+    font-size: 4rem;
+  }
+  .contactus-sub-heading{
+    font-size: 2rem;
+  }
+  
+}
+@media (max-width:750px) {
+  .nav-items{
+    display: none;
+  }
+}
+@media (max-width:450px) {
+  .faded-text{
+    font-size: 2rem;
+    bottom: -14%;
+  }
+ .skill-fade-text{
+   font-size: 5rem;
+   bottom: -14%;
+  } 
 }
